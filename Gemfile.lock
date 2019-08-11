@@ -314,10 +314,12 @@ DEPENDENCIES
   factory_bot_rails
   faker
   haml-rails
+  httparty
   jquery-rails
   letter_opener
   listen
   pry-rails
+  rack-test
   rails (= 5.2)
   rails-erd
   rspec-rails
@@ -331,4 +333,4 @@ DEPENDENCIES
   uglifier
 
 BUNDLED WITH
-   1.16.1
+   2.0.2

@@ -18,6 +18,9 @@ class MoviesController < ApplicationController
 
   def show
     @movie = Movie.find(params[:id])
+    response = JSON.parse HTTParty.get("https://pairguru-api.herokuapp.com/api/v1/movies/#{URI.encode(@movie.title)}").body
+    @attributes = response["data"]["attributes"]
+    @poster = "https://pairguru-api.herokuapp.com/#{@attributes["poster"]}"
   end
 
   def send_info
