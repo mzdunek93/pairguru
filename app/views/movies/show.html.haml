@@ -11,3 +11,9 @@
 
 - if user_signed_in?
   %p= link_to 'Email me details about this movie', send_info_movie_path(@movie), class: 'btn btn-sm btn-default'
+
+  - unless @has_comment
+    %h2 Add comment:
+    = simple_form_for @comment, url: add_comment_movie_path(@movie) do |f|
+      = f.input :content, label: false, placeholder: 'Content'
+      = f.button :submit, class: 'btn-default'
