@@ -1,0 +1,15 @@
+.row
+  .col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+    %h1.text-center Top commenters
+    %table.table
+      %thead
+        %tr
+          %th Place
+          %th Commenter
+          %th Comments count
+      %tbody
+        - @commenters.each_with_index do |commenter, index|
+          %tr
+            %td= index + 1
+            %td= commenter.name
+            %td= commenter.comments_count
