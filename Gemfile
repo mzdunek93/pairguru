@@ -11,6 +11,7 @@ gem "jquery-rails"
 gem "sass-rails"
 gem "sqlite3"
 gem "uglifier"
+gem "simple_form"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
