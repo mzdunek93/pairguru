@@ -17,4 +17,7 @@ Rails.application.routes.draw do
     end
   end
   resources :comments, only: :destroy
+  namespace :api do
+    resources :movies, only: [:index, :show]
+  end
 end

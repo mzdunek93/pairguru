@@ -9,7 +9,7 @@ gem "draper"
 gem "haml-rails"
 gem "jquery-rails"
 gem "sass-rails"
-gem "sqlite3"
+gem "sqlite3", "~> 1.3.6"
 gem "uglifier"
 gem "simple_form"
 gem "httparty"
@@ -36,6 +36,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "rubocop"
   gem "simplecov"
+  gem "rack-test"
 end
 
 group :test do
