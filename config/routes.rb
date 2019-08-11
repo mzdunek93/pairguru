@@ -17,4 +17,6 @@ Rails.application.routes.draw do
     end
   end
   resources :comments, only: :destroy
+
+  get :top_commenters, controller: :comments, action: :top_commenters
 end
