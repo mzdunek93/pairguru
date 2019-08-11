@@ -14,4 +14,12 @@
 
 class Movie < ApplicationRecord
   belongs_to :genre
+
+  def as_json(options={})
+    if options.key?(:only) or options.key?(:methods) or options.key?(:include) or options.key?(:except)
+      super(options)
+    else
+      super(only: [:id, :title])
+    end
+  end
 end

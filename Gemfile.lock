@@ -306,6 +306,7 @@ DEPENDENCIES
   letter_opener
   listen
   pry-rails
+  rack-test
   rails (= 5.2)
   rails-erd
   rspec-rails
