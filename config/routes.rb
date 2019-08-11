@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   namespace :api do
     resources :movies, only: [:index, :show]
   end
+
+  get :top_commenters, controller: :comments, action: :top_commenters
 end
